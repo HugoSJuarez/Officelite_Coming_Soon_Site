@@ -1,89 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Officelite coming soon site</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <header>
-    <img class="logo" src="assets/shared/logo.svg" alt="Officelite Logo">
-    <img class="bg-header" src="assets/home/bg-pattern-header.svg">
-  </header>
-  <main>
-    <section id="hero">
-      <div class="hero-text">
-        <h1>A simple solution to complex tasks is coming soon</h1>
-        <p class="body1">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-          collaboration platform built with an intuitive interface to improve productivity.</p>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/shared/logo.svg" alt="Officelite Logo" />
+      <img class="bg-header" src="assets/home/bg-pattern-header.svg" />
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-text">
+          <h1>A simple solution to complex tasks is coming soon</h1>
+          <p class="body1">
+            Say goodbye to inefficient juggling of multiple apps, teams, and
+            projects. Officelite is the new collaboration platform built with an
+            intuitive interface to improve productivity.
+          </p>
+          <button class="btn btn1">Get Started</button>
+        </div>
+        <div class="hero-img">
+          <img
+            src="assets/home/illustration-charts.svg"
+            alt="Officelite Charts"
+          />
+        </div>
+      </section>
+      <section id="pricing">
+        <div class="card-price">
+          <h2>Basic</h2>
+          <p class="price">Free</p>
+          <p class="bill-info body2">Up to 5 users for free</p>
+          <ul class="plan-description">
+            <li>Basic document collaboration</li>
+            <li>2 GB storage</li>
+            <li>Great security and support</li>
+          </ul>
+          <button class="btn btn2">Try for Free</button>
+        </div>
+        <div class="card-price" id="highlight">
+          <h2>Pro</h2>
+          <p class="price">$9.99</p>
+          <p class="bill-info">Per user, billed monthly</p>
+          <ul class="plan-description">
+            <li>All essential integrations</li>
+            <li>50 gb storage</li>
+            <li>More control and insights</li>
+          </ul>
+          <button class="btn btn3">Try for Free</button>
+        </div>
+        <div class="card-price">
+          <h2>Ultimate</h2>
+          <p class="price">$19.99</p>
+          <p class="bill-info">Per user, billed monthly</p>
+          <ul class="plan-description">
+            <li>Robust work management</li>
+            <li>100 gb storage</li>
+            <li>VIP support</li>
+          </ul>
+          <button class="btn btn2">Try for Free</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="bg-footer">
+        <img src="assets/home/bg-pattern-footer.svg" alt="" />
+      </div>
+      <div class="footer-info">
+        <div class="count-down">
+          <h2>Coming <span class="release-date">30 Nov 2020</span></h2>
+          <div class="cards-count-down">
+            <div class="card-count-down">
+              <p class="number">30</p>
+              <p class="time">Days</p>
+            </div>
+            <div class="card-count-down">
+              <p class="number">07</p>
+              <p class="time">Hours</p>
+            </div>
+            <div class="card-count-down">
+              <p class="number">56</p>
+              <p class="time">min</p>
+            </div>
+            <div class="card-count-down">
+              <p class="number">14</p>
+              <p class="time">seg</p>
+            </div>
+          </div>
+        </div>
         <button class="btn btn1">Get Started</button>
       </div>
-      <div class="hero-img">
-        <img src="assets/home/illustration-charts.svg" alt="Officelite Charts">
-      </div>
-    </section>
-    <section id="pricing">
-      <div class="card-price">
-        <h2>Basic</h2>
-        <p class="price">Free</p>
-        <p class="bill-info body2">Up to 5 users for free</p>
-        <ul class="plan-description">
-          <li>Basic document collaboration</li>
-          <li>2 GB storage</li>
-          <li>Great security and support</li>
-        </ul>
-        <button class="btn btn2">Try for Free</button>
-      </div>
-      <div class="card-price" id="highlight">
-        <h2>Pro</h2>
-        <p class="price">$9.99</p>
-        <p class="bill-info">Per user, billed monthly
-        </p>
-        <ul class="plan-description">
-          <li>All essential integrations</li>
-          <li>50 gb storage</li>
-          <li>More control and insights</li>
-        </ul>
-        <button class="btn btn3">Try for Free</button>
-      </div>
-      <div class="card-price">
-        <h2>Ultimate</h2>
-        <p class="price">$19.99</p>
-        <p class="bill-info">Per user, billed monthly</p>
-        <ul class="plan-description">
-          <li>Robust work management</li>
-          <li>100 gb storage</li>
-          <li>VIP support</li>
-        </ul>
-        <button class="btn btn2">Try for Free</button>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="count-down">
-      <h2>Coming 4 Nov 2020</h2>
-      <div class="card-count-down">
-        <p class="number">30</p>
-        <p class="time">Days</p>
-      </div>
-      <div class="card-count-down">
-        <p class="number">07</p>
-        <p class="time">Hours</p>
-      </div>
-      <div class="card-count-down">
-        <p class="number">56</p>
-        <p class="time">min</p>
-      </div>
-      <div class="card-count-down">
-        <p class="number">14</p>
-        <p class="time">seg</p>
-      </div>
-    </div>
-    <button>Get Started</button>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
