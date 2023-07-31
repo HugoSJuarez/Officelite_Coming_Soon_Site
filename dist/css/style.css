@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --font-heading-color: #333950;
+    --font-paragraph-color: #747B95;
+    --btn1-color-idle: #5175ff;
+    --btn1-color-hover: #829cff;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Header */
+
+header {
+    width: calc(100% - 23%);
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 81px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bg-header {
+    width: 1334px;
+    aspect-ratio: 1/1;
+    z-index: -1;
+
+    position: absolute;
+    left: 45%;
+    top: -419px;
+}
+
+/* Hero */
+
+.hero {
+    width: calc(100% - 23%);
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text{ 
+    width: 48.64%;
+}
+
+.hero-text h1 {
+    margin-bottom: 24px;
+}
+
+.hero-text p {
+    margin-bottom: 32px;
+}
+
+.hero-text button {
+    box-shadow: 0 25px 25px -10px rgba(63, 91, 194, 0.2472);
+}
+
+.hero-img {
+    width:42.79%;
+}
+
+.hero-img img {
+    width: 100%;
+    margin-bottom: -40px;
+}
+
+/* Buttons */
+.btn {
+    width: 171px;
+    height: 56px;
+    
+    border: none;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.btn1 {
+    color: white;
+    background-color: var(--btn1-color-idle);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--font-heading-color);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 48px;
+}
+
+/* Paragraphs */
+p, li {
+    color: var(--font-paragraph-color);
+    line-height: 28px;
+}
+
+.body1 {
+    font-size: 18px;
+}
+.body2 {
+    font-size: 16px;
+}
+
