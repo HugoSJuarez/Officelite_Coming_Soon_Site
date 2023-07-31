@@ -5,6 +5,8 @@
     --font-paragraph-color: #747B95;
     --btn1-color-idle: #5175ff;
     --btn1-color-hover: #829cff;
+    --btn2-color-idle: rgba(81, 117, 255, 0.1526);
+    --btn3-color-idle: #fff;
 }
 
 *, *::after, *::before {
@@ -14,9 +16,72 @@
 }
 
 body {
-    overflow-x: hidden;
     font-family: 'Kumbh Sans', sans-serif;
+    overflow-x: hidden;
 }
+
+/* Buttons */
+.btn {
+    width: 171px;
+    height: 56px;
+    
+    border: none;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.btn1 {
+    color: white;
+    background-color: var(--btn1-color-idle);
+}
+
+.btn2 {
+    color: var(--btn1-color-idle);
+    background-color: var(--btn2-color-idle);
+}
+
+.btn3 {
+    color: var(--btn1-color-idle);
+    background-color: var(--btn3-color-idle);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--font-heading-color);
+    font-weight: bold;
+}
+
+h1, .price {
+    font-size: 56px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 48px;
+}
+
+/* Paragraphs */
+p, li {
+    color: var(--font-paragraph-color);
+    line-height: 28px;
+}
+
+.body1 {
+    font-size: 18px;
+}
+.body2 {
+    font-size: 16px;
+}
+
+
 
 /* Header */
 
@@ -42,7 +107,7 @@ header {
 
 /* Hero */
 
-.hero {
+#hero {
     width: calc(100% - 23%);
     margin: 0 auto;
     margin-top: 100px;
@@ -77,54 +142,68 @@ header {
     margin-bottom: -40px;
 }
 
-/* Buttons */
-.btn {
-    width: 171px;
-    height: 56px;
+/* Pricing */
+#pricing {
+    width: calc(100% - 23%);
+    height: 508px;
+    margin: 0 auto;
+    margin-top: 184px;
     
-    border: none;
-    border-radius: 28px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 28px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.btn1 {
-    color: white;
-    background-color: var(--btn1-color-idle);
+.card-price {
+    width: 31.5%;
+    height: 100%;
+    border-radius: 13px;
+    background-color: #fff;
+    box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 0.2472);
+    padding: 40px 10px;
+    text-align: center;
+    position: relative;
 }
 
-/* Headings */
-h1, h2, h3 {
+.card-price h2 {
+    margin-bottom: 7.87%;
+}
+.card-price button {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.price {
     color: var(--font-heading-color);
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
-h1 {
-    font-size: 56px;
-    line-height: 64px;
+.bill-info {
+    color: var(--font-heading-color);
+    margin-bottom: 11%;
 }
 
-h2 {
-    font-size: 20px;
-    line-height: 28px;
+.plan-description {
+    list-style-type: none;
 }
 
-h3 {
+.plan-description li {
     font-size: 16px;
-    line-height: 48px;
+    margin-bottom: 16px;
 }
 
-/* Paragraphs */
-p, li {
-    color: var(--font-paragraph-color);
-    line-height: 28px;
+#highlight {
+    background-image: url("../assets/home/bg-pattern-pricing.svg");
+    background-color: var(--btn1-color-idle);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
 }
 
-.body1 {
-    font-size: 18px;
+#highlight *:not(button) {
+    color: #fff;
 }
-.body2 {
-    font-size: 16px;
-}
-
