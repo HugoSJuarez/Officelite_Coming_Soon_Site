@@ -6,6 +6,7 @@
     --btn1-color-idle: #5175ff;
     --btn1-color-hover: #829cff;
     --btn2-color-idle: rgba(81, 117, 255, 0.1526);
+    --btn2-color-hover: rgba(81, 117, 255, 0.25);
     --btn3-color-idle: #fff;
 }
 
@@ -37,14 +38,29 @@ body {
     background-color: var(--btn1-color-idle);
 }
 
+.btn1:hover {
+    background-color: var(--btn1-color-hover);
+    cursor: pointer;
+}
+
 .btn2 {
     color: var(--btn1-color-idle);
     background-color: var(--btn2-color-idle);
 }
 
+.btn2:hover {
+    background-color: var(--btn2-color-hover);
+    cursor: pointer;
+}
+
 .btn3 {
     color: var(--btn1-color-idle);
     background-color: var(--btn3-color-idle);
+}
+
+.btn3:hover{
+    color: #829CFF;
+    cursor: pointer;
 }
 
 /* Headings */
@@ -163,6 +179,7 @@ header {
     padding: 40px 10px;
     text-align: center;
     position: relative;
+    z-index: 1;
 }
 
 .card-price h2 {
