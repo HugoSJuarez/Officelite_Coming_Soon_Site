@@ -8,6 +8,8 @@
     --btn2-color-idle: rgba(81, 117, 255, 0.1526);
     --btn2-color-hover: rgba(81, 117, 255, 0.25);
     --btn3-color-idle: #fff;
+
+    --space-between-window: 23%;
 }
 
 *, *::after, *::before {
@@ -102,7 +104,7 @@ p, li {
 /* Header */
 
 header {
-    width: calc(100% - 23%);
+    width: calc(100% - var(--space-between-window));
     height: 30px;
     margin: 0 auto;
     margin-top: 81px;
@@ -124,7 +126,7 @@ header {
 /* Hero */
 
 #hero {
-    width: calc(100% - 23%);
+    width: calc(100% - var(--space-between-window));
     margin: 0 auto;
     margin-top: 100px;
     position: relative;
@@ -160,7 +162,7 @@ header {
 
 /* Pricing */
 #pricing {
-    width: calc(100% - 23%);
+    width: calc(100% - var(--space-between-window));
     height: 508px;
     margin: 0 auto;
     margin-top: 184px;
@@ -185,6 +187,7 @@ header {
 .card-price h2 {
     margin-bottom: 7.87%;
 }
+
 .card-price button {
     display: block;
     position: absolute;
@@ -228,6 +231,7 @@ header {
 footer {
     position: relative;
 }
+
 .bg-footer {
     width: 100%;
     height: 603px;
@@ -249,7 +253,7 @@ footer {
 }
 
 .footer-info {
-    width: calc(100% - 23%);
+    width: calc(100% - var(--space-between-window));
     height: 176px;
     
     position: absolute;
@@ -309,4 +313,127 @@ footer {
 
 .release-date {
     color: var(--btn1-color-idle);
+}
+
+/* Tablet */
+
+@media only screen and (max-width:768px){
+    :root{
+        --space-between-window: 10%;
+    }
+
+    /* Headers */
+    h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    /* Body */
+    .body1{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* Header */
+    .bg-header {
+        width: 666px;
+        aspect-ratio: 1/1;
+        z-index: -1;
+    
+        position: absolute;
+        left: 45%;
+        top: -164px;
+    }
+
+    /* Hero */
+    .hero-text{ 
+        width: 50.07%;
+    }
+
+    .hero-text p {
+        margin-bottom: 24px;
+    }
+    
+    .hero-img {
+        width:40.78%;
+    }
+
+    /* Pricing */
+    #pricing {
+        height: 996px;
+        margin-top: 140px;
+        
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+    
+    .card-price {
+        padding: 48px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-price h2 {
+        margin-bottom: 16px;
+    }
+
+    .card-price button {
+        position: static;
+        transform: none;
+    }
+    
+    .price {
+        margin-bottom: 4px;
+    }
+    
+    .bill-info {
+        margin-bottom: 24px;
+    }
+    
+    .plan-description {
+        position: absolute;
+        top: 92px;
+        right: 68px;
+    }
+
+    #highlight {
+        background-position: 150% 50%;
+    }  
+    
+    /* Footer */
+    .bg-footer {
+        height: 986px;
+        margin-top: -498px;
+    }
+    
+    .bg-footer img {
+        width: 1454px;
+        aspect-ratio: 1/1;
+        right: 0%;
+        top: 25%;
+    }
+
+    .footer-info {
+        width: calc(100% - 41.93%);
+        height: 288px;
+        
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 48px;
+    
+    }
+
+    .count-down h2 {
+        text-align: center;
+        margin-bottom: 8px;
+        
+    }
 }
