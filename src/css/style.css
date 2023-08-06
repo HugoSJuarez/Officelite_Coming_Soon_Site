@@ -18,11 +18,14 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Kumbh Sans', sans-serif;
+html,body {
     overflow-x: hidden;
 }
 
+body {
+    width: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
 /* Buttons */
 .btn {
     width: 171px;
@@ -317,7 +320,7 @@ footer {
 
 /* Tablet */
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:900px){
     :root{
         --space-between-window: 10%;
     }
@@ -436,4 +439,119 @@ footer {
         margin-bottom: 8px;
         
     }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 550px) {
+    
+    /* Header */
+
+    header {
+        margin-top: 46px;
+        justify-content: center;
+    }
+
+    .bg-header {
+        width: 458px;
+        aspect-ratio: 1/1;
+        z-index: -1;
+    
+        position: absolute;
+        left: 0%;
+        transform: translateX(-10%);
+        top: -20%;
+    }
+
+    /* Hero */
+
+    #hero {
+        margin-top: 80px;
+        flex-direction: column-reverse;
+        row-gap: 64px;
+    }
+
+    .hero-text{ 
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-bottom: 24px;
+    }
+
+    .hero-img {
+        width: 52.79%;
+    }
+
+    /* Pricing */
+
+    #pricing {
+        
+        height: 1588px;
+        margin: 0 auto;
+        margin-top: 100px;
+        
+    }
+
+    .card-price {
+        text-align: center;
+    }
+
+    .card-price h2 {
+        margin-bottom: 40px;
+    }
+
+    .card-price button {
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+    }
+
+    .bill-info {
+        margin-bottom: 56px;
+    }
+
+    .plan-description {
+        position: static;
+    }
+
+
+    #highlight {
+        background-position: 50% 100%;
+    }
+
+
+    /* Footer */
+    .footer-info {
+        height: 254px;
+    }
+    .bg-footer {
+        height: 1248px;
+        margin-top: -794px;
+    }
+
+    .bg-footer img {
+        top: 100px;
+    }
+
+    .cards-count-down {
+        gap: 13px;
+    }
+
+    .card-count-down {
+        width: 72px;
+        height: 92px;
+    }
+
+    .number {
+        font-size: 32px;
+        margin-bottom: -4px;
+    }
+
+    .time {
+        font-size: 12px;
+    }
+
 }
