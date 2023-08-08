@@ -175,6 +175,10 @@ input:focus{
     margin-left: 7px;
 }
 
+.selection-display-box{
+    cursor: pointer;
+}
+
 #selection {
     color: #333950;
     font-size: 16px;
@@ -184,17 +188,20 @@ input:focus{
 
 #selection::after{
     content: "";
+    background-image: url("../assets/sign-up/icon-arrow-down.svg");
     width: 12.5px;
     height: 8px;
-    background-image: url("../assets/sign-up/icon-arrow-down.svg");
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scaleY(1);
+}
+
+#selection.down::after{
+    transform: translateY(-50%) scaleY(-1);
 }
 
 #options {
-    display: none;
     background-color: #fff;
     width: calc(100% + 32px);
     height: 198px;
@@ -236,4 +243,18 @@ input:focus{
     position: absolute;
     top: 9px;
     right: 7px;
+}
+
+
+/* Hidden visible class */
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-highlight {
+    user-select: none; 
+         -moz-user-select: none; 
+         -webkit-text-select: none; 
+         -webkit-user-select: none; 
 }

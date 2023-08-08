@@ -15,7 +15,6 @@ function convertMiliToDays(mili) {
     }
     else{
         for(let i=0; i<(timeForEachToPass.length-1); i++){
-            console.log("time",i);
             mili/= timeForEachToPass[i];
             timeAux = Math.floor( mili%timeForEachToPass[i+1] );
             mili-=timeAux;
@@ -34,7 +33,6 @@ const timeText = document.querySelectorAll(".number");
 setInterval(()=>{
     let today = new Date();
     convertMiliToDays(releaseDate-today);
-    console.log(timeLeft);
     timeText.forEach((text, i)=>{
         text.innerText=timeLeft[i];
     })

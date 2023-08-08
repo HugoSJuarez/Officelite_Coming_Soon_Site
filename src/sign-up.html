@@ -65,7 +65,7 @@
               required
             />
           </div>
-          <div class="input-box wrong">
+          <div class="input-box">
             <input
               type="email"
               name="email"
@@ -76,12 +76,14 @@
           </div>
           <div class="input-box">
             <div class="select">
-              <input type="text" name="package" id="package" value="basic">
-              <label id="selection" for="package">Basic Pack <span class="cost">Free</span></label>
-              <ul id="options">
-                <li class="option selected-option">Basic Pack <span class="cost">Free</span></li>
-                <li class="option">Pro Pack <span class="cost">$9.99</span></li>
-                <li class="option">Ultimate Pack <span class="cost">$19.99</span></li>
+              <div class="selection-display-box">
+                <input type="text" name="package" id="package" value="basic">
+                <label id="selection" class="no-highlight" for="package">Basic Pack <span class="cost">Free</span></label>
+              </div>
+              <ul id="options" class="hidden">
+                <li class="option selected-option" data-package="basic">Basic Pack <span class="cost">Free</span></li>
+                <li class="option" data-package="pro">Pro Pack <span class="cost">$9.99</span></li>
+                <li class="option" data-package="ultimate">Ultimate Pack <span class="cost">$19.99</span></li>
               </ul>
             </div>
           </div>
@@ -108,5 +110,6 @@
       </section>
     </main>
     <script src="js/release-date.js"></script>
+    <script src="./js/sign-up.js"></script>
   </body>
 </html>
