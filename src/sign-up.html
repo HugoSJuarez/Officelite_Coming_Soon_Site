@@ -18,7 +18,10 @@
     <header>
       <img class="logo" src="./assets/shared/logo.svg" alt="Officelite Logo" />
       <div class="bg-sign-up">
-        <img class="bg-sign-up-pattern" src="./assets/sign-up/bg-pattern-side.svg">
+        <img
+          class="bg-sign-up-pattern"
+          src="./assets/sign-up/bg-pattern-side.svg"
+        />
       </div>
     </header>
     <main>
@@ -54,23 +57,51 @@
       <section id="sign-up-form">
         <form action="">
           <div class="input-box">
-            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
           </div>
           <div class="input-box">
-            <input type="email" name="email" id="email" placeholder="Email Address" required>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
           </div>
           <div class="input-box">
-            <select name="package" id="package">
-              <option value="basic">Basic Pack <span class="cost">Free</span></option>
-              <option value="basic">Pro Pack <span class="cost">$9.99</span></option>
-              <option value="basic">Ultimate Pack <span class="cost">$19.99</span></option>
-            </select>
+            <div class="select">
+              <input type="text" name="package" id="package" value="basic">
+              <label id="selection" for="package">Basic Pack <span class="cost">Free</span></label>
+              <ul id="options">
+                <li class="option selected-option">Basic Pack <span class="cost">Free</span></li>
+                <li class="option">Pro Pack <span class="cost">$9.99</span></li>
+                <li class="option">Ultimate Pack <span class="cost">$19.99</span></li>
+              </ul>
+            </div>
           </div>
           <div class="input-box">
-            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+              required
+            />
           </div>
           <div class="input-box">
-            <input type="text" name="company" id="company" placeholder="Company" required>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Company"
+              required
+            />
           </div>
           <button class="btn btn1" type="submit">Get on the list</button>
         </form>
