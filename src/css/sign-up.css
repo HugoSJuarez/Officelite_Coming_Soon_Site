@@ -133,6 +133,27 @@ input:focus{
     outline: none;
 }
 
+/* Wrong  */
+
+.wrong {
+    border-color: #F05B5B;
+    position: relative;
+}
+
+.wrong input {
+    color: #F05B5B;
+}
+
+.wrong::after{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    background-image: url("../assets/sign-up/icon-cross.svg");
+    position: absolute;
+    top: 4px;
+    right: 20px;
+}
+
 #sign-up-form > form > button {
     width: 100%;
 }
