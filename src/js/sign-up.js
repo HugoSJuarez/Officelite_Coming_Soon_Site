@@ -50,5 +50,3 @@ options.forEach(option =>{
         optionsMenu.classList.add("hidden");
     });
 });
-
-
