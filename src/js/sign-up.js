@@ -1,4 +1,6 @@
 const email = document.querySelector("#email");
+const nameInput = document.querySelector("#name");
+
 const isValidEmail = (email)=>{
     return email.match(    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ );
 }
@@ -8,9 +10,12 @@ const optionsMenu = document.querySelector("#options");
 const selectionText = document.querySelector("#selection");
 const selectionInput = document.querySelector("#package");
 const options = document.querySelectorAll(".option");
+const form = document.querySelector("#form-sign-up");
+
+const checkInputs = [email, nameInput];
 
 // Email Validation
-email.addEventListener("input", (e)=>{
+email.addEventListener("change", (e)=>{
     const value = e.target.value; 
     
     if( (!isValidEmail(value)) && (value != "") ) {
@@ -50,3 +55,27 @@ options.forEach(option =>{
         optionsMenu.classList.add("hidden");
     });
 });
+
+// Add action on submit
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let isValid = true;
+    checkInputs.forEach(input=>{
+        if( input.value === "" || (input === email && !isValidEmail(email.value))){
+            input.parentElement.classList.add("wrong");
+            isValid = false;
+        }
+    });
+    if(isValid){
+        alert("Submit successfull");
+    }
+});
+
+// Add name event 
+nameInput.addEventListener("change",(e)=>{
+    if(e.value !== ""){
+        nameInput.parentElement.classList.remove("wrong");
+    }
+});
+
+
